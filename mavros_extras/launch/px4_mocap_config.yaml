@@ -61,10 +61,10 @@ imu:
 
 # local_position
 local_position:
-  frame_id: "world"
+  frame_id: "fcu"
   tf:
     send: true
-    frame_id: "world"
+    frame_id: "local_origin"
     child_frame_id: "fcu"
     send_fcu: true
 
@@ -148,8 +148,8 @@ image:
 # mocap_pose_estimate
 mocap:
   # select mocap source
-  use_tf: false   # ~mocap/tf
-  use_pose: true  # ~mocap/pose
+  use_tf: true   # ~mocap/tf
+  use_pose: false  # ~mocap/pose
 
 # px4flow
 px4flow:
